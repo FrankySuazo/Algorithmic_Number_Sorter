@@ -1,8 +1,11 @@
+//HTML Import
 const sortButton = document.getElementById("sort");
 
+//To avoid changes
 const sortInputArray = (event) => {
   event.preventDefault();
 
+  //Dropdown values and sorts
   const inputValues = [
     ...document.getElementsByClassName("values-dropdown")
   ].map((dropdown) => Number(dropdown.value));
@@ -13,6 +16,7 @@ const sortInputArray = (event) => {
 
   updateUI(sortedValues);
 }
+
 
 const updateUI = (array = []) => {
     array.forEach((num, i) => {
